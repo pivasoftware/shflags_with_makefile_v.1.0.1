@@ -1,0 +1,16 @@
+prefix		=	@prefix@
+
+install:	
+		mkdir -p $(prefix)/share/shflags/
+		cp shflags $(prefix)/share/shflags/shflags.sh
+
+uninstall: 
+		rm -r $(prefix)/share/shflags/
+
+Makefile:	
+		configure Makefile.in
+
+
+
+
+

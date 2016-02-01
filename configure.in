@@ -1,0 +1,15 @@
+AC_INIT()
+
+dnl Version number...
+VERSION=1.0
+AC_SUBST(VERSION)
+AC_DEFINE_UNQUOTED(MICROXML_VERSION, "shflags v$VERSION")
+
+dnl Fix "prefix" variable if it hasn't been specified...
+if test "$prefix" = "NONE"; then
+	prefix="/usr/local"
+fi
+
+dnl Output the makefile, etc...
+AC_OUTPUT(Makefile)
+
